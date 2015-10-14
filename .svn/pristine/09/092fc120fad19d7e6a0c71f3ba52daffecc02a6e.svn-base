@@ -1,0 +1,38 @@
+/**
+ * MINI TEXT EDITOR
+ * DSS - M1
+ * EIT ICT Labs
+ * Author: Ishan Tiwari and Ricardo Ernesto Martinez Ramirez
+ */
+package fr.istic.aco.editor.test;
+
+import org.junit.Before;
+import org.junit.Test;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+
+import fr.istic.aco.editor.version2.core.*;
+import fr.istic.aco.editor.version2.commands.*;
+import fr.istic.aco.editor.commands.*;
+
+public class StartRecordTest {
+	
+	private StartRecord start;
+	private EditorRecordingManager recordingMngr;
+	private final int indexStart = 3;
+	private Command command;
+
+	@Before
+	public void SetUp() throws Exception{
+		recordingMngr = mock(EditorRecordingManager.class);
+		start =  new StartRecord(recordingMngr, indexStart);
+		command = mock(Command.class);
+	}
+	
+	@Test
+	public void test() {
+		start.execute();
+		verify(recordingMngr).editorStartRecording(start, indexStart);
+	}
+
+}

@@ -1,0 +1,82 @@
+/**
+ * @author Ishan Tiwari and Ricardo Ernesto Martinez Ramirez
+ *
+ * @see MINI TEXT EDITOR
+ * @see DSS - M1
+ * @see EIT ICT Labs
+ * 
+ */
+package fr.istic.aco.editor.version2.stub;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import fr.istic.aco.editor.commands.Command;
+import fr.istic.aco.editor.version2.core.EditorRecordingManager;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class EditorRecordingManagerImpl.
+ */
+public class EditorRecordingManagerImpl implements EditorRecordingManager{
+
+	/** The trait. */
+	private static List<Command> trait = new ArrayList<Command>(); /* list to hold the commands */
+
+	/* (non-Javadoc)
+	 * @see fr.istic.aco.editor.version2.core.EditorRecordingManager#getTrait()
+	 */
+	public List<Command> getTrait() {
+		return trait;
+	}
+
+	/* (non-Javadoc)
+	 * @see fr.istic.aco.editor.version2.core.EditorRecordingManager#setTrait(java.util.List)
+	 */
+	@SuppressWarnings("static-access")
+	public void setTrait(List<Command> trait) {
+		this.trait = trait;
+	}
+
+	/* For Stop operation*/
+	/* (non-Javadoc)
+	 * @see fr.istic.aco.editor.version2.core.EditorRecordingManager#editorStopRecording(int)
+	 */
+	public void editorStopRecording(int index)
+		{
+			System.out.println("<<<Recording stopped>>>");
+		}
+	/* For Play operation*/
+	/* (non-Javadoc)
+	 * @see fr.istic.aco.editor.version2.core.EditorRecordingManager#editorPlay(int)
+	 */
+	public void editorPlay(int index)
+		{
+			if(trait.isEmpty())							/* Checking if the list is empty or not*/
+			{
+				System.out.println("Nothing to play, Please record first");
+			}
+			else
+			{
+				for (Command command : trait) 
+				{
+					System.out.println(" \nOperation is "+command.toString());
+					command.execute();
+				
+				}
+			}
+		}
+
+	/* For StartRecording operation*/
+	/* (non-Javadoc)
+	 * @see fr.istic.aco.editor.version2.core.EditorRecordingManager#editorStartRecording(fr.istic.aco.editor.commands.Command, int)
+	 */
+	@Override
+	public void editorStartRecording(Command command, int index) 
+	{
+		trait.clear();
+	}
+
+
+		
+}

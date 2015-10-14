@@ -1,0 +1,29 @@
+/**
+ * MINI TEXT EDITOR
+ * DSS - M1
+ * EIT ICT Labs
+ * Author: Ishan Tiwari and Ricardo Ernesto Martinez Ramirez
+ */
+
+package fr.istic.aco.editor.core;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Interface EditorClipboard.
+ */
+public interface EditorClipboard {
+
+	/**
+	 * Gets the line.
+	 *
+	 * @return the line
+	 */
+	String getLine();
+	
+	/**
+	 * Sets the line.
+	 *
+	 * @param line the new line
+	 */
+	void setLine(String line);
+}

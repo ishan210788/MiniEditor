@@ -1,0 +1,30 @@
+/**
+ * MINI TEXT EDITOR
+ * DSS - M1
+ * EIT ICT Labs
+ * Author: Ishan Tiwari and Ricardo Ernesto Martinez Ramirez
+ */
+package fr.istic.aco.editor.core;
+
+import fr.istic.aco.editor.commands.Command;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Interface MiniEditorInvoker.
+ */
+public interface MiniEditorInvoker {
+
+	/**
+	 * Run.
+	 *
+	 * @param cmd the cmd
+	 */
+	void run(Command cmd);
+	
+	/**
+	 * Undo redo.
+	 *
+	 * @param command the command
+	 */
+	public void UndoRedo(Command command);
+}

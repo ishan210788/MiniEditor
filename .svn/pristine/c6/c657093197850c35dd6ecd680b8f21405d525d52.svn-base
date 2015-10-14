@@ -1,0 +1,44 @@
+/* 
+ * Author : Ishan & Ricardo
+ * Description : Selection interface
+ * 
+ * 
+ * */
+package fr.istic.aco.editor.core;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Interface EditorSelection.
+ */
+public interface EditorSelection 
+	{
+		
+		/**
+		 * Sets the start.
+		 *
+		 * @param start the new start
+		 */
+		void setStart(int start);
+		
+		/**
+		 * Sets the stop.
+		 *
+		 * @param stop the new stop
+		 */
+		void setStop(int stop);
+		
+		/**
+		 * Gets the stop.
+		 *
+		 * @return the stop
+		 */
+		int getStop();
+		
+		/**
+		 * Gets the start.
+		 *
+		 * @return the start
+		 */
+		int getStart();
+	
+	}

@@ -1,0 +1,83 @@
+/* 
+ * Author : Ishan & Ricardo
+ * Description : MiniEditorEngine interface
+ * 
+ * 
+ * */
+package fr.istic.aco.editor.core;
+
+import java.util.List;
+
+import fr.istic.aco.editor.commands.Command;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Interface MiniEditorEngine.
+ */
+public interface MiniEditorEngine {
+	
+	/**
+	 * Gets the buffer.
+	 *
+	 * @return the buffer
+	 */
+	public EditorBuffer getBuffer();
+	
+	/**
+	 * Gets the selection.
+	 *
+	 * @return the selection
+	 */
+	public EditorSelection getSelection();
+	
+	/**
+	 * Gets the clipboard.
+	 *
+	 * @return the clipboard
+	 */
+	public EditorClipboard getClipboard();
+	
+	/**
+	 * Editor insert.
+	 *
+	 * @param substring the substring
+	 */
+	public void editorInsert(String substring);
+	
+	/**
+	 * Editor select.
+	 *
+	 * @param start the start
+	 * @param stop the stop
+	 */
+	public void editorSelect(int start, int stop);
+	
+	/**
+	 * Editor copy.
+	 */
+	public void editorCopy();
+	
+	/**
+	 * Editor cut.
+	 */
+	public void editorCut();
+	
+	/**
+	 * Editor paste.
+	 */
+	public void editorPaste();
+	
+	/**
+	 * Sets the trait.
+	 *
+	 * @param trait the new trait
+	 */
+	public void setTrait(List<Command> trait);
+	
+	/**
+	 * Gets the trait.
+	 *
+	 * @return the trait
+	 */
+	public List<Command> getTrait();
+}

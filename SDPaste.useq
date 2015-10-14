@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.7" icons="true" automaticImage="JPEG">  
+  <object id="1" language="java" name="fr.istic.aco.editor.stub.MiniEditorTextInterface" project="MiniEditor" 
+    file="/MiniEditor/src/fr/istic/aco/editor/stub/MiniEditorTextInterface.java" binary="false" 
+    label="miniEditorTextInterface" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="53" y="0"/>    
+    <execution id="2">      
+      <position height="327" width="154" x="5" y="78"/>    
+    </execution>  
+  </object>  
+  <object id="5" language="java" name="fr.istic.aco.editor.stub.MiniEditorStub" project="MiniEditor" 
+    file="/MiniEditor/src/fr/istic/aco/editor/stub/MiniEditorStub.java" binary="false" label="miniEditorStub" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="205" y="0"/>    
+    <execution id="4">      
+      <position height="285" width="105" x="163" y="99"/>    
+    </execution>  
+  </object>  
+  <object id="10" language="java" name="fr.istic.aco.editor.commands.Paste" project="MiniEditor" 
+    file="/MiniEditor/src/fr/istic/aco/editor/commands/Paste.java" binary="false" label="paste" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="339" y="0"/>    
+    <execution id="7">      
+      <position height="21" width="127" x="272" y="120"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="171" width="127" x="272" y="171"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="fr.istic.aco.editor.core.MiniEditorInvoker" project="MiniEditor" 
+    file="/MiniEditor/src/fr/istic/aco/editor/core/MiniEditorInvoker.java" binary="false" label="miniEditorInvoker" 
+    type="interface" autoSize="true">    
+    <position height="-1" width="-1" x="466" y="0"/>    
+    <execution id="9">      
+      <position height="213" width="121" x="403" y="150"/>    
+    </execution>  
+  </object>  
+  <object id="16" language="java" name="fr.istic.aco.editor.core.MiniEditorEngine" project="MiniEditor" 
+    file="/MiniEditor/src/fr/istic/aco/editor/core/MiniEditorEngine.java" binary="false" label="miniEditorEngine" 
+    type="interface" autoSize="true">    
+    <position height="-1" width="-1" x="595" y="0"/>    
+    <execution id="13">      
+      <position height="129" width="117" x="528" y="192"/>    
+    </execution>    
+    <execution id="21">      
+      <position height="21" width="7" x="583" y="235"/>    
+    </execution>  
+  </object>  
+  <object id="22" language="java" name="fr.istic.aco.editor.core.EditorBuffer" project="MiniEditor" 
+    file="/MiniEditor/src/fr/istic/aco/editor/core/EditorBuffer.java" binary="false" label="editorBuffer" 
+    type="interface" autoSize="true">    
+    <position height="-1" width="-1" x="705" y="0"/>    
+    <execution id="20">      
+      <position height="21" width="99" x="649" y="279"/>    
+    </execution>  
+  </object>  
+  <object id="23" language="java" name="fr.istic.aco.editor.core.EditorClipboard" project="MiniEditor" 
+    file="/MiniEditor/src/fr/istic/aco/editor/core/EditorClipboard.java" binary="false" label="editorClipboard" 
+    type="interface" autoSize="true">    
+    <position height="-1" width="-1" x="791" y="0"/>    
+    <execution id="18">      
+      <position height="64" width="110" x="752" y="213"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="editorPaste():void">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6" operation="Paste(fr.istic.aco.editor.core.MiniEditorEngine)">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="8" operation="run(fr.istic.aco.editor.commands.Command):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="12" operation="editorPaste():void">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="15" operation="execute():void">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="17" operation="getLine():java.lang.String">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="19" operation="write(int,int,java.lang.String):void">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="24" operation="getClipboard():fr.istic.aco.editor.core.EditorClipboard">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="21"/>  
+  </message>
+</sequence-diagram>
